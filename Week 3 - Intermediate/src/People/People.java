@@ -1,10 +1,7 @@
-package Level2;
+package People;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class People {
 

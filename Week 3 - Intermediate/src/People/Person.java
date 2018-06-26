@@ -1,4 +1,5 @@
-package Level2;
+package People;
+
 
 public class Person {
     String name;
