@@ -37,7 +37,7 @@ public class Garage {
         } else if(vehicles.equals(ECONOMY)){
             bill += 90;
         }
-        System.out.println(bill);
+        System.out.println("Total bill is: "+bill);
 
         return bill;
     }

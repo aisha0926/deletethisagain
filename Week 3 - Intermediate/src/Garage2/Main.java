@@ -6,8 +6,9 @@ public class Main {
 
         Car a = new Car(2);
 
-        System.out.println(a);
+       // System.out.println(a);
 
+        g.addVehicle(new Car(3));
         g.billCalulation();
         g.toString();
     }

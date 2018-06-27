@@ -54,7 +54,7 @@ public abstract class Vehicle {
     }
 
     public String toString(){
-        return plateNumber + name + model;
+        return plateNumber + " " + name + " " + model;
     }
 
 }

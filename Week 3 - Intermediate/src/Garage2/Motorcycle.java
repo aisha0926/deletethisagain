@@ -4,7 +4,7 @@ public class Motorcycle extends Vehicle {
 
     public Motorcycle(int id){
         this.setColour("Blue");
-        this.setModel("Royal");
+        this.setModel(Garage.HIGH_END);
         this.setName("BMW");
         this.setPlateNumber(id);
         this.setSeat(4);

@@ -4,7 +4,7 @@ public class Car extends Vehicle {
 
     public Car(int id){
         this.setColour("Red");
-        this.setModel("Fiesta");
+        this.setModel(Garage.ECONOMY);
         this.setName("Ford");
         this.setPlateNumber(id);
         this.setSeat(4);
