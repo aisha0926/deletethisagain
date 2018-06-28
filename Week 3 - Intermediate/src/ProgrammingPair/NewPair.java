@@ -20,18 +20,18 @@ public class NewPair {
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
-            for (int x = 0; x < st.length; x++) {
+       //     for (int x = 0; x < st.length; x++) {
                 if (arr[i] != line) {
-                    if (arr[i] == st[x]) {
-                        System.out.println(arr[i] + "st");
+//                    if (arr[i] == st[x]) {
+//                        System.out.println(arr[i] + "st");
 
 
 //                        if (arr[i] == st[0]) {
 //                            //System.out.println(arr[i] + "st");
 //                        } else {
-//                            System.out.println(arr[i] + "th");
+                            System.out.println(arr[i] + "rd");
 //                        }
-                    }
+      //              }
                     //      }
                 }
 
@@ -41,4 +41,4 @@ public class NewPair {
     }
 
 
-}
+
