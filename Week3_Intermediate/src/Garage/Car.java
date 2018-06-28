@@ -1,9 +1,7 @@
 package Garage;
 
 public class Car extends Vehicle {
-
-    public int numberOfDoors;
-
+    String model;
 
     public Car(int id){
         super(id);
@@ -16,4 +14,15 @@ public class Car extends Vehicle {
         this.setColour(colour);
         this.setType(type);
     }
+
+    @Override
+    public String getModel() {
+        return model;
+    }
+
+    @Override
+    public void setModel(String model) {
+        this.model = model;
+    }
+
 }

@@ -4,67 +4,28 @@ import java.util.ArrayList;
 
 public class Garage {
     ArrayList<Vehicle> val = new ArrayList<>();
+    int repair = 0;
 
-    void addVehicle(Vehicle a){
-
-        val.add(a);
+    protected boolean addVehicle(Vehicle a){
+       // val.add(a);
+        return val.add(a);
     }
 
-    void removeVehicle(Vehicle a){
-
-            val.remove(a);
-
+    protected void removeVehicle(Vehicle a){
+        val.remove(a);
     }
 
-    public void displayIt(){
-        for(Vehicle x: val){
-            System.out.println(x.toString());
-        }
+    protected double calc(){
+        double bill = 0;
 
+       for(Vehicle x: val){
+           if(x instanceof Car){
+               bill += 100;
+           } else if(x instanceof ATV){
+               bill += 50;
+           }
+       }
+       return bill;
     }
 
-    public void calculateLoop(){
-        int bill = 0;
-
-        for (Vehicle v : val){
-
-            if(v.getClass().getSimpleName().equals("Car")){
-
-                //do something
-
-                Car tempCar;
-
-                tempCar = (Car) v;
-
-             //   System.out.println(tempCar.numberOfDoors);
-                bill += 100;
-            //    System.out.println(bill);
-
-            } else if (v.getClass().getSimpleName().equals("ATV")){
-                ATV tempATV;
-                tempATV = (ATV) v;
-                    bill += 50;
-             //   System.out.println(bill);
-              //  System.out.println(tempATV);
-
-            }
-
-            System.out.println(bill);
-
-        }
-
-
-    }
-
-
-
-    private int calc(VehicleType a){
-        int bill = 0;
-        if(a.equals(VehicleType.ECONOMY)){
-            bill += 100;
-        } else if(a.equals(VehicleType.HIGH_END)){
-            bill += 300;
-        }
-        return bill;
-    }
 }

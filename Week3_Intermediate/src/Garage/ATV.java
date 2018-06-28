@@ -1,6 +1,7 @@
 package Garage;
 
 public class ATV extends Vehicle {
+    String model;
 
 
     public ATV(int id){
@@ -14,4 +15,17 @@ public class ATV extends Vehicle {
         this.setColour(colour);
         this.setType(type);
     }
+
+    @Override
+    public String getModel() {
+        return model;
+    }
+
+    @Override
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+
+
 }
