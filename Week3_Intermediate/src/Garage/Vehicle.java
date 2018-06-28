@@ -4,13 +4,12 @@ public abstract class Vehicle {
     private int id;
     private String model;
     private String colour;
+    private String type;
+
 
     public void setType(String type) {
         this.type = type;
     }
-
-    private String type;
-
 
     public int getId() {
         return id;
