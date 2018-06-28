@@ -6,6 +6,7 @@ public class Garage {
     ArrayList<Vehicle> val = new ArrayList<>();
 
     void addVehicle(Vehicle a){
+
         val.add(a);
     }
 
@@ -22,11 +23,42 @@ public class Garage {
 
     }
 
-    boolean fixingVehicle(){
-        return true;
+    public void calculateLoop(){
+        int bill = 0;
+
+        for (Vehicle v : val){
+
+            if(v.getClass().getSimpleName().equals("Car")){
+
+                //do something
+
+                Car tempCar;
+
+                tempCar = (Car) v;
+
+             //   System.out.println(tempCar.numberOfDoors);
+                bill += 100;
+            //    System.out.println(bill);
+
+            } else if (v.getClass().getSimpleName().equals("ATV")){
+                ATV tempATV;
+                tempATV = (ATV) v;
+                    bill += 50;
+             //   System.out.println(bill);
+              //  System.out.println(tempATV);
+
+            }
+
+            System.out.println(bill);
+
+        }
+
+
     }
 
-    protected int calc(String a){
+
+
+    private int calc(VehicleType a){
         int bill = 0;
         if(a.equals(VehicleType.ECONOMY)){
             bill += 100;
