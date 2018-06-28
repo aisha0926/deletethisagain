@@ -18,9 +18,8 @@ public class Garage {
 
     public void displayIt(){
         for(Vehicle x: val){
-
             System.out.println(x.toString());
-        }   calculateLoop();
+        }
 
     }
 
