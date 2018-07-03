@@ -12,7 +12,7 @@ public class Motorcycle extends Vehicle{
         super(id);
         this.setModel(model);
         this.setColour(colour);
-        this.setType(VehicleType.ECONOMY);
+       // this.setType(VehicleType.ECONOMY);
     }
 
 }

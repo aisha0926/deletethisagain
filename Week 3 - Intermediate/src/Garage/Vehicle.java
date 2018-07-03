@@ -14,6 +14,7 @@ public abstract class Vehicle {
         double bill=0.0;
 
         if(type.equals(VehicleType.FOUR_WHEELER)){
+
             bill = 100;
         } else if(type.equals(VehicleType.TWO_WHEELER)){
             bill = 50;
