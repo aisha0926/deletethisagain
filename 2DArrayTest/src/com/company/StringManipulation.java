@@ -27,8 +27,6 @@ public class StringManipulation {
             }
         }
 
-
-
             for(char vv: words){
                 if(words3.contains(vv)){
 
@@ -57,11 +55,6 @@ public class StringManipulation {
                System.out.println(dd);
            }
 
-
-
-
-
-
 //            iterator<Character> it = words.iterator();
 //            for(int i = 0; i< words.size()-1; i++){
 //                for(int x = 0; x < words.size()-1; x++){
@@ -75,10 +68,5 @@ public class StringManipulation {
 //                    }
 //                }
 //            }
-
-
-
-
-
     }
 }
