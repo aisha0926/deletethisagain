@@ -9,6 +9,7 @@ public class Main {
     // doubleChar("AAbb") → "AAAAbbbb"
     // doubleChar("Hi-There") → "HHii--TThheerree"
     public static  String returnOneString(String returning){
+        String[] s = returning.split("");
         ArrayList<String> s1 = new ArrayList<String>();
 
 
@@ -17,17 +18,21 @@ public class Main {
         }
 
 
+
+
+
+
         return s1.toString();
     }
 
     public String doubleChar(String input) {
 
         String[] words = input.split("bread");
-
-        for(int i = 0; i < words.length; i++){
+        int i;
+        for(i = 0; i < words.length-1; i++){
             System.out.println(words[i]);
         }
-        return "";
+        return words[i];
     }
     //
     // A sandwich is two pieces of bread with something in between. Return the

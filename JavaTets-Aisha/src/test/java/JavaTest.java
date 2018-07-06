@@ -11,7 +11,7 @@ public class JavaTest {
         //Add another character to the original one
         //return it
         Main a = new Main();
-        assertEquals("TThhee", a.returnOneString("The"));
+        assertEquals("The, he", a.returnOneString("The, he"));
     }
 
     @Test
