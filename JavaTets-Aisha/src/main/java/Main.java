@@ -17,11 +17,6 @@ public class Main {
             s1.add(returning.substring(i));
         }
 
-
-
-
-
-
         return s1.toString();
     }
 
