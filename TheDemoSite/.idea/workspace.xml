@@ -66,8 +66,8 @@
       <file leaf-file-name="TestingMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestingMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            <state relative-caret-position="903">
+              <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,10 +96,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="height" value="715" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -251,15 +251,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestingMain_testMethod - 2018.07.10 at 15h 02m 37s.xml">
-      <configuration name="TestingMain.testMethod" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestingMain_testMethod - 2018.07.10 at 15h 11m 10s.xml">
-      <configuration name="TestingMain.testMethod" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestingMain_testMethod - 2018.07.10 at 15h 15m 22s.xml">
-      <configuration name="TestingMain.testMethod" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestingMain_testMethod - 2018.07.10 at 15h 27m 40s.xml">
       <configuration name="TestingMain.testMethod" configurationId="JUnit" />
     </history-entry>
@@ -281,19 +272,29 @@
     <history-entry file="TestingMain_testMethod - 2018.07.10 at 17h 06m 26s.xml">
       <configuration name="TestingMain.testMethod" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestingMain_testMethod - 2018.07.10 at 20h 36m 15s.xml">
+      <configuration name="TestingMain.testMethod" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestingMain_testMethod - 2018.07.10 at 20h 37m 28s.xml">
+      <configuration name="TestingMain.testMethod" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestingMain_testMethod - 2018.07.10 at 21h 09m 25s.xml">
+      <configuration name="TestingMain.testMethod" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="716" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32913387" />
+      <window_info anchor="bottom" id="Messages" weight="0.32866043" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25984251" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25856698" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -383,8 +384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestingMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="903">
+          <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
