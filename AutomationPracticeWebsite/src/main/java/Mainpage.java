@@ -10,8 +10,7 @@ public class Mainpage {
     @FindBy(id = "block_top_menu")
     private WebElement nav;
 
-
-    public void query(String test){
+    public void searchBar(String test){
         searchBox.sendKeys(Keys.chord(Keys.SHIFT, test));
         searchBox.submit();
     }
