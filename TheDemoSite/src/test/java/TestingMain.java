@@ -53,9 +53,10 @@ public class TestingMain {
         //Accessing the file, creating a link which connects to an excel file. Think of it as a sandwich,
         //this acts as a jam which connects both burger sandwich together
         FileInputStream file = new FileInputStream(LoginData);
-        //Not sure about this
+        //XSSFWorkbook is used when working with spreadsheets
         XSSFWorkbook workbook = new XSSFWorkbook(file);
-        //Not sure about this too
+        //Getting the spreadsheet sheet, at the bottom of spreadsheet, you normally get
+        //multiple sheets which starts at 0
         XSSFSheet sheet = workbook.getSheetAt(0);
 
         //Creating a loop which will loop through the rows in the excel file
