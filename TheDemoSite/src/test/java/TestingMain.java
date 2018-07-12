@@ -20,7 +20,7 @@ public class TestingMain {
     ChromeDriver driver;
     ExtentTest test;
     ExtentReports report;
-    String LoginData = "/Users/Aisha/Downloads/Automated Testing Exercises/DemoSiteDDT.xlsx";
+   // String LoginData = "/Users/Aisha/Downloads/Automated Testing Exercises/DemoSiteDDT.xlsx";
 
     @BeforeClass
     public static void beforeClass(){
@@ -28,7 +28,9 @@ public class TestingMain {
     }
 
     @Before
-    public void setup(){
+    public void setup() throws Exception{
+        ExcelUtils.setExcelFile(Contants.pathTestData + Contants.fileTest, 0);
+
         System.setProperty("webdriver.chrome.driver", "/Development/web_driver/chromedriver");
         driver = new ChromeDriver();
     }
@@ -52,7 +54,7 @@ public class TestingMain {
 
         //Accessing the file, creating a link which connects to an excel file. Think of it as a sandwich,
         //this acts as a jam which connects both burger sandwich together
-        FileInputStream file = new FileInputStream(LoginData);
+        FileInputStream file = new FileInputStream(Contants.pathTestData + Contants.fileTest);
         //XSSFWorkbook is used when working with spreadsheets
         XSSFWorkbook workbook = new XSSFWorkbook(file);
         //Getting the spreadsheet sheet, at the bottom of spreadsheet, you normally get
@@ -72,7 +74,7 @@ public class TestingMain {
             //Maximizing the window screen
             driver.manage().window().maximize();
             //Getting the website page
-            driver.get("http://thedemosite.co.uk/index.php");
+            driver.get(Contants.homepageURL);
             //Storing the title of the page
             String title = driver.getTitle();
 
@@ -104,13 +106,29 @@ public class TestingMain {
             login.loginUser(user);
             login.logingPass(pass);
 
+            String title1 = driver
+                    .findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b"))
+                    .getText();
+            String expected = "**Successful Login**";
+
+
+            if (!title1.equals(expected)) {
+                test.log(LogStatus.FAIL, "Demo Site Login Test");
+                report.endTest(test);
+                report.flush();
+                ExcelUtils.setCellData("Fail", i, 2);
+            }
+
+
+            assertEquals(expected, title1);
+            ExcelUtils.setCellData("Pass", i, 2);
+            test.log(LogStatus.PASS, "Demo Site Login Test");
+
         }
 
         //Checking if the login is successful by using the assertEquals and the text that's supposed to show up.
-        assertEquals("**Successful Login**",
-                driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b")).getText());
-
-
+      //  assertEquals("**Successful Login**",
+             //   driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b")).getText());
     }
 
     /*
