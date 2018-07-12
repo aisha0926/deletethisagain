@@ -3,7 +3,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/")
+@CucumberOptions(features = "src/test/java")
 public class Main {
 
 }
