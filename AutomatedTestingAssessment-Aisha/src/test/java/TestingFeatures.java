@@ -133,8 +133,7 @@ public class TestingFeatures {
         }
 
         assertEquals(expected, "ssdsdw2111");
-        tests.log(LogStatus.PASS, "");
-
+        tests.log(LogStatus.PASS, "Correct details");
 
     }
 
