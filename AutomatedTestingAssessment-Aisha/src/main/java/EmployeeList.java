@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class EmployeeList {
     WebDriver driver;
+   // Actions actions;
 
     @FindBy(id = "firstName")
     private WebElement first;
@@ -53,6 +54,9 @@ public class EmployeeList {
     @FindBy(id = "employee_name_quick_filter_employee_list_value")
     private WebElement searchTxt;
 
+    @FindBy(xpath = "//*[@id=\"employeeListTable\"]/tbody/tr/td[1]")
+    private WebElement employeePicture;
+
 
     public void addingEmployee(String name, String mid, String last,String empID){
 
@@ -65,22 +69,10 @@ public class EmployeeList {
         lastName.sendKeys(Keys.TAB);
         employeeID.sendKeys(empID);
         employeeID.sendKeys(Keys.TAB);
-       // location.click();
-       // location.sendKeys(Keys.ARROW_DOWN);
-      //  testsss.sendKeys("U");
-       // testsss.sendKeys("u");
-       // Actions actions = new Actions(driver);
-        //actions.sendKeys(location, "u").perform();
-
             for(int i=0; i < 12; i++){
                 location.sendKeys(Keys.ARROW_DOWN);
                 location.sendKeys(Keys.chord(Keys.ENTER));
             }
-
-      //  location.sendKeys("U");
-       // location.submit();
-
-
     }
 
     public void radialClick(){
@@ -113,8 +105,14 @@ public class EmployeeList {
 
     public void searchEmployee(String name){
         searchTxt.sendKeys(name);
-        searchTxt.sendKeys(Keys.ARROW_DOWN);
+
     }
+
+    public void clickEmployee(){
+        employeePicture.click();
+    }
+
+
 
 
 }

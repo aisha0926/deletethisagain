@@ -46,8 +46,8 @@
       <file leaf-file-name="TestingFeatures.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestingFeatures.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="103" selection-start-line="103" selection-end-line="105" selection-end-column="47" />
+            <state relative-caret-position="220">
+              <caret line="157" column="76" lean-forward="true" selection-start-line="157" selection-start-column="76" selection-end-line="157" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,6 +148,19 @@
               <item name="AutomatedTestingAssessment" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutomatedTestingAssessment-Aisha copy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomatedTestingAssessment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomatedTestingAssessment-Aisha copy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutomatedTestingAssessment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutomatedTestingAssessment-Aisha copy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AutomatedTestingAssessment" type="b2602c69:ProjectViewProjectNode" />
@@ -484,8 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestingFeatures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="103" selection-start-line="103" selection-end-line="105" selection-end-column="47" />
+        <state relative-caret-position="220">
+          <caret line="157" column="76" lean-forward="true" selection-start-line="157" selection-start-column="76" selection-end-line="157" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

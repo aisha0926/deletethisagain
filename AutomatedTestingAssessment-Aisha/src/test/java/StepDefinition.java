@@ -8,27 +8,32 @@ import cucumber.api.java.en.When;
 import gherkin.lexer.Th;
 import org.junit.After;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestingFeatures {
+public class StepDefinition {
     WebDriver driver;
     ExtentReports reports;
     ExtentTest tests;
 
+    Actions actions;
+
     @Before
-    public void setup(){
+    public void setup() {
         System.setProperty(Constants.STRING_DRIVER, Constants.DRIVER_PATH);
         driver = new ChromeDriver();
 
         reports = new ExtentReports(Constants.FILE_PATH, true);
         tests = reports.startTest("Starting the test for OrangeHRM");
+        actions = new Actions(driver);
     }
 
 
@@ -38,7 +43,7 @@ public class TestingFeatures {
         driver.navigate().to(Constants.WEB_URL);
 
         tests.log(LogStatus.INFO, "Testing if the webpage is correct");
-        if(driver.getCurrentUrl().equals(Constants.WEB_URL)){
+        if (driver.getCurrentUrl().equals(Constants.WEB_URL)) {
             tests.log(LogStatus.PASS, "Correct URL");
         } else {
             tests.log(LogStatus.FAIL, "Incorrect web url");
@@ -52,10 +57,10 @@ public class TestingFeatures {
     public void i_login() {
         // Write code here that turns the phrase above into concrete actions
         Login logingIn = PageFactory.initElements(driver, Login.class);
-        logingIn.login("Admin" , "AdminAdmin");
+        logingIn.login("Admin", "AdminAdmin");
 
         tests.log(LogStatus.INFO, "Testing if the username and password is entered correctly");
-        if(Constants.SUCCESSFUL_URL != Constants.UNSUCCESSFUL){
+        if (Constants.SUCCESSFUL_URL != Constants.UNSUCCESSFUL) {
             tests.log(LogStatus.PASS, "Correct details entered");
         } else {
             tests.log(LogStatus.FAIL, "Incorrect details");
@@ -71,26 +76,26 @@ public class TestingFeatures {
         // Write code here that turns the phrase above into concrete actions
         Sidebar pimTab = PageFactory.initElements(driver, Sidebar.class);
         pimTab.pimTab();
-       // Thread.sleep(10000);
+        // Thread.sleep(10000);
 
     }
 
     @When("^then the Add Employee Tab$")
     public void then_the_Add_Employee_Tab() throws InterruptedException {
-       // Thread.sleep(10000);
+        // Thread.sleep(10000);
         Sidebar addTab = PageFactory.initElements(driver, Sidebar.class);
         addTab.addEmployeeTab();
     }
 
     @When("^I fill out the Employee Details correctly$")
-    public void i_fill_out_the_Employee_Details_correctly()  {
+    public void i_fill_out_the_Employee_Details_correctly() {
         // Write code here that turns the phrase above into concrete actions
         WebElement dynamicElement = (new WebDriverWait(driver, 300)).until
                 (ExpectedConditions.presenceOfElementLocated(By.id("firstName")));
 
         // Write code here that turns the phrase above into concrete actions
         EmployeeList employeeList = PageFactory.initElements(driver, EmployeeList.class);
-        employeeList.addingEmployee("Sittie","Aisha","Amate" ,"018371");
+        employeeList.addingEmployee("Sittie", "Aisha", "Amate", "k313");
 
     }
 
@@ -107,7 +112,7 @@ public class TestingFeatures {
     public void i_fill_out_the_Login_Details_correctly() {
         // Write code here that turns the phrase above into concrete actions
         EmployeeList addingUser = PageFactory.initElements(driver, EmployeeList.class);
-        addingUser.addUser(   "r9k22",
+        addingUser.addUser("aisha9213",
                 "appleipod0926", "appleipod0926");
 
 
@@ -118,21 +123,25 @@ public class TestingFeatures {
         // Write code here that turns the phrase above into concrete actions
         EmployeeList saveBtn = PageFactory.initElements(driver, EmployeeList.class);
         saveBtn.saveBtnMethod();
-        //Thread.sleep(3000);
+
+        //String title = driver.findElement(By.xpath("//*[@id=\"pim.navbar.employeeName\"]")).getText();
+        //String expected = "Sittie Amate";
+        //assertEquals(expected, title);
     }
 
     @Then("^I can search for the Employee I have just created$")
     public void i_can_search_for_the_Employee_I_have_just_created() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-//        Thread.sleep(3000);
-//        Sidebar clicking = PageFactory.initElements(driver, Sidebar.class);
-//        clicking.pimTab();
-//       // clicking.addEmployeeTab();
-//        clicking.employeeList();
-//        Thread.sleep(10000);
-//        WebElement dynamicElement = (new WebDriverWait(driver, 300)).until
-//                (ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"angucomplete-title-temp-id\"]")));
-//
+        Sidebar clicking = PageFactory.initElements(driver, Sidebar.class);
+        EmployeeList employeeSrch = PageFactory.initElements(driver, EmployeeList.class);
+
+        clicking.pimTab();
+        clicking.employeeList();
+        Thread.sleep(3000);
+        employeeSrch.searchEmployee("12345");
+        actions.sendKeys(Keys.ENTER).perform();
+        employeeSrch.clickEmployee();
+
 //        EmployeeList searching = PageFactory.initElements(driver, EmployeeList.class);
 //        searching.searchEmployee("Aisha");
 //
@@ -143,14 +152,19 @@ public class TestingFeatures {
 //            tests.log(LogStatus.FAIL, "Failure");
 //        }
 
-      //  assertEquals(expected, "Aisha");
-       // tests.log(LogStatus.PASS, "Correct details");
+        //  assertEquals(expected, "Aisha");
+        // tests.log(LogStatus.PASS, "Correct details");
 
     }
 
     @Then("^select them for inspection$")
     public void select_them_for_inspection() {
         // Write code here that turns the phrase above into concrete actions
+
+//        WebElement dynamicElement = (new WebDriverWait(driver, 300)).until
+//                (ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"employeeListTable\"]/tbody/tr/td[1]/img")));
+//        EmployeeList select = PageFactory.initElements(driver, EmployeeList.class);
+//        select.clickEmployee();
     }
 
     @After
