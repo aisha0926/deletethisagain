@@ -8,6 +8,9 @@ public class Sidebar {
     @FindBy(xpath = "//*[@id=\"menu_pim_addEmployee\"]/span[2]")
     private WebElement addEmployee;
 
+    @FindBy(xpath = "//*[@id=\"menu_pim_viewEmployeeList\"]/span[2]")
+    private WebElement employeeList;
+
     public void pimTab(){
         PIM.click();
 
@@ -15,6 +18,10 @@ public class Sidebar {
 
     public void addEmployeeTab(){
         addEmployee.click();
+    }
+
+    public void employeeList(){
+        employeeList.click();
     }
 
 

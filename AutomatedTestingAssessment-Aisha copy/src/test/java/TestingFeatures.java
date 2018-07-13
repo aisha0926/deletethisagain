@@ -143,8 +143,7 @@ public class TestingFeatures {
         EmployeeList addingUser = PageFactory.initElements(driver, EmployeeList.class);
         addingUser.addUser(   "test9092",
                 "appleipod0926", "appleipod0926");
-
-
+        
     }
 
     @When("^I click the Save button$")
