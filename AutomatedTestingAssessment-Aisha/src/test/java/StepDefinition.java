@@ -95,7 +95,7 @@ public class StepDefinition {
 
         // Write code here that turns the phrase above into concrete actions
         EmployeeList employeeList = PageFactory.initElements(driver, EmployeeList.class);
-        employeeList.addingEmployee("Sittie", "Aisha", "Amate", "k313");
+        employeeList.addingEmployee("Sittie", "Aisha", "Amate", "7661323");
 
     }
 
@@ -112,8 +112,7 @@ public class StepDefinition {
     public void i_fill_out_the_Login_Details_correctly() {
         // Write code here that turns the phrase above into concrete actions
         EmployeeList addingUser = PageFactory.initElements(driver, EmployeeList.class);
-        addingUser.addUser("aisha9213",
-                "appleipod0926", "appleipod0926");
+        addingUser.addUser("ais3663", "appleipod0926", "appleipod0926");
 
 
     }
@@ -132,6 +131,8 @@ public class StepDefinition {
     @Then("^I can search for the Employee I have just created$")
     public void i_can_search_for_the_Employee_I_have_just_created() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
+
+        Thread.sleep(10000);
         Sidebar clicking = PageFactory.initElements(driver, Sidebar.class);
         EmployeeList employeeSrch = PageFactory.initElements(driver, EmployeeList.class);
 
@@ -140,7 +141,7 @@ public class StepDefinition {
         Thread.sleep(3000);
         employeeSrch.searchEmployee("12345");
         actions.sendKeys(Keys.ENTER).perform();
-        employeeSrch.clickEmployee();
+       // employeeSrch.clickEmployee();
 
 //        EmployeeList searching = PageFactory.initElements(driver, EmployeeList.class);
 //        searching.searchEmployee("Aisha");
@@ -164,6 +165,8 @@ public class StepDefinition {
 //        WebElement dynamicElement = (new WebDriverWait(driver, 300)).until
 //                (ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"employeeListTable\"]/tbody/tr/td[1]/img")));
 //        EmployeeList select = PageFactory.initElements(driver, EmployeeList.class);
+        EmployeeList clicking = PageFactory.initElements(driver, EmployeeList.class);
+        clicking.clickEmployee();
 //        select.clickEmployee();
     }
 
