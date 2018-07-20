@@ -10,4 +10,3 @@ Feature: Searching google with keyword
     Examples:
     | website | keywords |
     | https://www.google.co.uk | mamamoo |
-    | https://www.google.co.uk | tree |

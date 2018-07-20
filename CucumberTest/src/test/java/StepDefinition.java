@@ -6,7 +6,6 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import static org.junit.Assert.assertTrue;
 
 public class StepDefinition {
     WebDriver driver;
@@ -35,9 +34,17 @@ public class StepDefinition {
     }
 
     @Then("^I am taken to the page$")
-    public void i_am_taken_to_the_page() {
+    public void i_am_taken_to_the_page() throws InterruptedException {
         // Write code here that turns the phrase above into concrete actions
-       assertTrue(!url.equals(driver.getCurrentUrl()));
+        int i = 30;
+        do {
+            i--;
+            driver.navigate().to("https://en.wikipedia.org/wiki/Mamamoo");
+            Thread.sleep(30000);
+            driver.navigate().to(Constants.WEBURL);
+           driver.navigate().to("https://www.youtube.com/watch?v=pHtxTSiPh5I");
+            Thread.sleep(80000);
+        } while (i!=0);
     }
 
     @After
