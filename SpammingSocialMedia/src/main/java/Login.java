@@ -19,8 +19,8 @@ public class Login {
     }
 
     public void logingIn(){
-        userNameTxt.sendKeys("cliche214");
-        passTxt.sendKeys("FuckLove13");
+        userNameTxt.sendKeys("jerxmeldn");
+        passTxt.sendKeys("Johanna0707.");
         passTxt.submit();
        // loginButton.click();
     }

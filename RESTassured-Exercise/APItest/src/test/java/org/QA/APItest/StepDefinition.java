@@ -29,7 +29,6 @@ public class StepDefinition {
 //	}
 
 	@Test
-	@Ignore
 	public void addingObject() {
 		request = given().when().contentType(ContentType.JSON);
 		response = request.when().get("http://localhost:8090/example/v1/hotels/18");

@@ -62,7 +62,7 @@ public class EmployeeList {
 
 
         first.sendKeys(name);
-        first.sendKeys(Keys.chord(Keys.TAB));
+        first.sendKeys(Keys.TAB);
         midName.sendKeys(mid);
         midName.sendKeys(Keys.chord(Keys.TAB));
         lastName.sendKeys(last);

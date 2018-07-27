@@ -5,7 +5,7 @@ public class Sidebar {
     @FindBy(xpath = "//*[@id=\"menu_pim_viewPimModule\"]/a/span[2]")
     private WebElement PIM;
 
-    @FindBy(xpath = "//*[@id=\"menu_pim_addEmployee\"]/span[2]")
+    @FindBy(xpath = "//*[@id=\"menu_pim_addEmployee\"]")
     private WebElement addEmployee;
 
     @FindBy(xpath = "//*[@id=\"menu_pim_viewEmployeeList\"]/span[2]")

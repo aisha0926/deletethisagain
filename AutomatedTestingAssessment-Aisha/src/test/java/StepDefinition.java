@@ -25,12 +25,13 @@ public class StepDefinition {
     ExtentTest tests;
 
     Actions actions;
-
+        
+    
     @Before
     public void setup() {
         System.setProperty(Constants.STRING_DRIVER, Constants.DRIVER_PATH);
         driver = new ChromeDriver();
-
+        driver.manage().window().maximize();
         reports = new ExtentReports(Constants.FILE_PATH, true);
         tests = reports.startTest("Starting the test for OrangeHRM");
         actions = new Actions(driver);
