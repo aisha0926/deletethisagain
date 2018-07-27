@@ -38,11 +38,9 @@ import io.restassured.specification.RequestSpecification;
 
 public class StepDefinition {
 	WebDriver driver;
-	ExtentReports report;
+	ExtentReports report = new ExtentReports("C:\\Users\\Admin\\Documents\\deletethisagain\\Reporting\\TestTestTest.html", true);
 	ExtentTest test;
-	private Response response;
-	private ValidatableResponse json;
-	private RequestSpecification request;
+
 	JSONObject object = new JSONObject();
 
 	Actions actions;
@@ -53,18 +51,17 @@ public class StepDefinition {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		actions = new Actions(driver);
-		request = given().contentType(ContentType.JSON);
 	}
 
 	@Test
 	public void addingNewOwner() throws InterruptedException {
-		report = new ExtentReports("C:\\Users\\Admin\\Documents\\deletethisagain\\Reporting\\Selenium.html", true);
-		test = report.startTest("Verify if person is added");
 		
+		test = report.startTest("Verify if person is added");	
+		test.log(LogStatus.INFO, "Browser started");
 		driver.navigate().to(Constants.WEB_URL);
 		AddingNewOwner adding = PageFactory.initElements(driver, AddingNewOwner.class);
 		MainPage navToMainPage = PageFactory.initElements(driver, MainPage.class);			
-		test.log(LogStatus.INFO, "Browser started");
+		//
 		
 		navToMainPage.ownersTabClick();
 		navToMainPage.addNewOwnerClick();
@@ -75,6 +72,9 @@ public class StepDefinition {
 
 		navToMainPage.ownersTabClick();
 		navToMainPage.addNewOwnerClick();
+		
+		Thread.sleep(3000);
+		driver.findElement(By.partialLinkText("George")).click();
 		// driver.findElement(By.partialLinkText("Ninja Assasin")).click();
 		// Thread.sleep(60);
 		navToMainPage.clickingName();
@@ -121,7 +121,8 @@ public class StepDefinition {
 	public void tearDown() {
 		report.endTest(test);
 		report.flush();
-		driver.quit();
+		
+//		driver.quit();
 	}
 
 }
