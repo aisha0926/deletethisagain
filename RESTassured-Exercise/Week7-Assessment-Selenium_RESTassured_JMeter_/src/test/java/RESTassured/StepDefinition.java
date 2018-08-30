@@ -30,7 +30,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class StepDefinition {
-	WebDriver driver;
 	ExtentReports reports;
 	ExtentTest tests;
 	private Response response;
@@ -38,20 +37,15 @@ public class StepDefinition {
 	private RequestSpecification request;
 	JSONObject object = new JSONObject();
 
-	Actions actions;
-
 	@Before
 	public void setup() {
-		System.setProperty(Constants.DRIVER_STRING, Constants.DRIVER_PATH);
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		actions = new Actions(driver);
 		request = given().contentType(ContentType.JSON);
 	}
 
 	@Test
+	@Ignore
 	public void delete() {
-		request = given().when().contentType(ContentType.JSON);
+		//request = given().when().contentType(ContentType.JSON);
 		response = request.delete(Constants.SWAGGER + "/15");
 		System.out.println("response: " + response.prettyPrint());
 	}
@@ -59,12 +53,20 @@ public class StepDefinition {
 	@Test
 	@Ignore
 	public void getID() {
-		request = given().when().contentType(ContentType.JSON);
-		response = request.get(Constants.SWAGGER + "/17");
+		//request = given().when().contentType(ContentType.JSON);
+		response = request.get(Constants.SWAGGER + "/10");
+		System.out.println("response: " + response.prettyPrint());
+	}
+	
+	@Test
+	public void getLastName() {
+
+		response = request.get(Constants.SWAGGER + "/*/lastname/" + "Franklin");
 		System.out.println("response: " + response.prettyPrint());
 	}
 
 	@Test
+	@Ignore
 	public void post() {
 		JSONArray petArray = new JSONArray();
 		JSONArray visitArray = new JSONArray();
